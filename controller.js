@@ -1,19 +1,20 @@
-const model = require('./model');
-const view = require('./view');
-
 class TodoController {
     
-    constructor() {
+    constructor(model, view) {
 
-        this.todoModel = new TodoModel();
-        this.todoView = new TodoView();
+        this.todoModel = model;
+        this.todoView = view;
 
-        this.todoRegisterationBtn = this.todoModel.getTodoRegisterationBtn();
+        this.todoRegisterationBtn = model.getTodoRegisterationBtn();
+
+        // console.log(this.todoRegisterationBtn)
 
     }
 
     registerButtonClickEvent() {
+        console.log("run registerButtonClickEvent Method");
         this.todoRegisterationBtn.onclick = function() {
+            console.log("todoRegisteronBtn onClicked !");
             this.todoListParentUlTag = todoModel.getTodoListParentUlTag();
 
             const todoInputData = this.todoModel.getTodoInputData();
@@ -24,4 +25,4 @@ class TodoController {
     }
 }
 
-module.exports = TodoController;
+console.log('success load controller.js');

@@ -7,4 +7,4 @@ class TodoView {
     }
 }
 
-module.export = TodoView;
+console.log("success load view.js");

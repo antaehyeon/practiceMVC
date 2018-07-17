@@ -1,5 +1,11 @@
+window.onload = function() {
+    console.log("success window onload");
 
-window.addEventListener('load', function() {
-    console.log("Success app.js Excute")
-    new TodoController().registerButtonClickEvent();
-});
+    const model = new TodoModel();
+    const view = new TodoView();
+    const controller = new TodoController(model, view);
+
+    console.log(model);
+    console.log(view);
+    controller.registerButtonClickEvent();
+};

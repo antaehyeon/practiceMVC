@@ -27,9 +27,11 @@ class TodoModel {
     }
 
     getTodoRegisterationBtn() {
-        return this.todoRegisterationBtn;
+        // console.log("enter getTodoRegisterationBtn");
+        // console.log(this.todoRegisterationBtn);
+        return this.todoRegisterationBtn[0];
     }
 
 }
 
-module.exports = TodoModel;
+console.log("success load module.js");
