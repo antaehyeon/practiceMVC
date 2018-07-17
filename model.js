@@ -32,4 +32,4 @@ class TodoModel {
 
 }
 
-exports.TodoModel = new TodoModel();
+module.exports = TodoModel;

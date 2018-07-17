@@ -1,3 +1,6 @@
+const model = require('./model');
+const view = require('./view');
+
 class TodoController {
     
     constructor() {
@@ -21,4 +24,4 @@ class TodoController {
     }
 }
 
-exports.TodoController;
+module.exports = TodoController;

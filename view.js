@@ -7,4 +7,4 @@ class TodoView {
     }
 }
 
-exports.TodoView;
+module.export = TodoView;
