@@ -6,7 +6,7 @@ class TodoController {
         this.todoView = new TodoView();
 
         this.todoRegisterationBtn = this.todoModel.getTodoRegisterationBtn();
-        
+
     }
 
     registerButtonClickEvent() {
@@ -19,12 +19,6 @@ class TodoController {
             this.todoView.registerTask(this.todoListParentUlTag, listItemNode);
         }
     }
-
-
-
-
-
-    
-
-
 }
+
+exports.TodoController;
