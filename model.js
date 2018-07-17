@@ -19,10 +19,14 @@ class TodoModel {
     }
 
     getTodoInputData() {
-        this.todoInputBox.value;
+        console.log("enter getTodoInputData");
+        console.log(this.todoInputBox.value);
+        return this.todoInputBox.value;
     }
 
     getTodoListParentUlTag() {
+        // console.log("enter getTodoListParentUlTag");
+        // console.log(this.todoListParentUlTag);
         return this.todoListParentUlTag;
     }
 
