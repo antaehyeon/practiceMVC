@@ -2,13 +2,8 @@ class TodoModel {
 
     constructor() {
         this.todoInputBox = document.getElementsByName("todo")[0];
-        this.registerationTodoData = document.getElementsByTagName("button");
+        this.todoRegisterationBtn = document.getElementsByTagName("button");
         this.todoListParentUlTag = document.getElementsByClassName("todolist")[0];
-    }
-
-    registerTask(todoData) {
-        const todoListItemNode = this.createListItemNode(todoData);
-        this.todoListParentUlTag.appendChild(todoListItemNode);
     }
 
     createListItemNode(textData) {
@@ -23,8 +18,16 @@ class TodoModel {
         return this.todoInputBox;
     }
 
+    getTodoInputData() {
+        this.todoInputBox.value;
+    }
+
     getTodoListParentUlTag() {
         return this.todoListParentUlTag;
+    }
+
+    getTodoRegisterationBtn() {
+        return this.todoRegisterationBtn;
     }
 
 }
