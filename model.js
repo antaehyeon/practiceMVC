@@ -8,34 +8,65 @@ class TodoModel {
         이런식으로요
         this.todolist = [];
         */
-        this.todoInputBox = document.getElementsByName("todo")[0];
-        this.todoRegisterationBtn = document.getElementsByTagName("button");
-        this.todoListParentUlTag = document.getElementsByClassName("todolist")[0];
+
+        this.currentInputTodoData;
+        this.todoList = [];
+
+        // this.todoInputBox = document.getElementsByName("todo")[0];
+        // this.todoRegisterationBtn = document.getElementsByTagName("button");
+        // this.todoListParentUlTag = document.getElementsByClassName("todolist")[0];
     }
 
-    createListItemNode(textData) {
+    getCurrentInputTodoData() {
+        return this.todoInputData;
+    }
+
+    setCurrentInputTodoData(data) {
+        this.todoInputData = data;
+    }
+
+    getTodoList() {
+        return this.todoList;
+    }
+
+    pushTodoListData(data) {
+        this.todoList.push(data);
+    }
+
+    createListItemNode() {
         const listItemNode = document.createElement("li");
-        const textNode = document.createTextNode(textData);
+        console.log("02"); console.log(listItemNode);
+        const textNode = document.createTextNode(this.getCurrentInputTodoData());
+        console.log("03"); console.log(textNode);
+        console.log("04"); console.log(this.currentInputTodoData);
         listItemNode.appendChild(textNode);
 
         return listItemNode;
     }
 
-    getTodoInputBox() {
-        return this.todoInputBox;
-    }
+    // createListItemNode(textData) {
+    //     const listItemNode = document.createElement("li");
+    //     const textNode = document.createTextNode(textData);
+    //     listItemNode.appendChild(textNode);
 
-    getTodoInputData() {
-        return this.todoInputBox.value;
-    }
+    //     return listItemNode;
+    // }
 
-    getTodoListParentUlTag() {
-        return this.todoListParentUlTag;
-    }
+    // getTodoInputBox() {
+    //     return this.todoInputBox;
+    // }
 
-    getTodoRegisterationBtn() {
-        return this.todoRegisterationBtn[0];
-    }
+    // getTodoInputData() {
+    //     return this.todoInputBox.value;
+    // }
+
+    // getTodoListParentUlTag() {
+    //     return this.todoListParentUlTag;
+    // }
+
+    // getTodoRegisterationBtn() {
+    //     return this.todoRegisterationBtn[0];
+    // }
 
 }
 
