@@ -3,7 +3,10 @@
 */
 window.addEventListener('DOMContentLoaded', function() {
     const model = new TodoModel();
-    const view = new TodoView(model);
-    const controller = new TodoController(model, view);
+    const view = new TodoView();
+    const control = new TodoController(model, view);
 
+    const registerationBtn = view.findElementByClassName("button");
+    // console.log("00"); console.log(registerationBtn);
+    // control.registerEventListener(registerationBtn, control.addTodoListData(model, view));
 });

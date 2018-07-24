@@ -9,16 +9,26 @@ class TodoController {
     constructor(model, view) {
         this.model = model;
         this.view = view;
-        this.registrationBtn = this.view.findElementByTagName("button");
-        this.registerEventListener(this.registrationBtn, this.addTodoListData(model, view));
+
+        this.registerEventListener(model, view);
     }
 
-    registerEventListener(node, handler) {
-        node.addEventListener("click", this.addTodoListData());
+    registerEventListener(model, view) {
+        const registerationBtn = view.findElementByTagName("button");
+        // console.log("01"); console.log(registerationBtn);
+        // console.log("02"); console.log(model);
+        // console.log("03"); console.log(view);
+        // const registerationBtn = document.querySelector("button");
+        // console.log("05"); console.log(registerationBtn);
+        registerationBtn.addEventListener("click", () => {
+            this.addTodoListData(model, view);
+            // console.log(this);
+        });
     }
 
     addTodoListData(model, view) {
         const currentInputData = view.findElementByName("todo").value;
+        // console.log("00"); console.log(currentInputData);
         model.setCurrentInputTodoData(currentInputData);
         const todoItemNode = model.createListItemNode();
         const todoListParentNode = view.findElementByClassName("todolist");
