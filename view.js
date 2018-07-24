@@ -14,8 +14,6 @@ class TodoView {
     }
 
     findElementByClassName(name) {
-        // console.log("04"); console.log(document.getElementsByClassName(name)[0]);
-        // console.log("06"); console.log(name);
         return document.getElementsByClassName(name)[0];
     }
 
