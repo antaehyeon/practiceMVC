@@ -3,6 +3,6 @@
 */
 window.addEventListener('DOMContentLoaded', function() {
     const model = new TodoModel();
-    const view = new TodoView();
+    const view = new TodoView(model);
     const control = new TodoController(model, view);
 });

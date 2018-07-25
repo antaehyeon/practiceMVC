@@ -23,7 +23,7 @@ class TodoController {
     addTodoListData(model, view) {
         const currentInputData = view.findElementByName("todo").value;
         model.setCurrentInputTodoData(currentInputData);
-        const todoItemNode = model.createListItemNode();
+        const todoItemNode = view.createListItemNode();
         const todoListParentNode = view.findElementByClassName("todolist");
         view.registerTask(todoListParentNode, todoItemNode);
     }

@@ -5,6 +5,10 @@
 
 class TodoView {
 
+    constructor(model) {
+        this.model = model;
+    }
+
     findElementByName(name) {
         return document.getElementsByName(name)[0];
     }
@@ -15,6 +19,14 @@ class TodoView {
 
     findElementByClassName(name) {
         return document.getElementsByClassName(name)[0];
+    }
+
+    createListItemNode() {
+        const listItemNode = document.createElement("li");
+        const textNode = document.createTextNode(this.model.getCurrentInputTodoData());
+        listItemNode.appendChild(textNode);
+
+        return listItemNode;
     }
 
     registerTask(parentNode, childNode) {
