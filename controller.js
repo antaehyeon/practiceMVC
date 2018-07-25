@@ -26,5 +26,6 @@ class TodoController {
         const todoItemNode = view.createListItemNode();
         const todoListParentNode = view.findElementByClassName("todolist");
         view.registerTask(todoListParentNode, todoItemNode);
+        model.pushTodoListData();
     }
 }
