@@ -29,6 +29,14 @@ class TodoView {
         return listItemNode;
     }
 
+    controlTodoListHidden(mode) {
+        const todoListRegisterationBtn = this.findElementByClassName("register");
+        const todoListParentNode = this.findElementByClassName("todolist");
+
+        todoListRegisterationBtn.disabled = (mode === "fold") ? true : false;
+        todoListParentNode.hidden = (mode === "fold") ? true : false;
+    }
+
     registerTask(parentNode, childNode) {
         parentNode.appendChild(childNode);
     }
